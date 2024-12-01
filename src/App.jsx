@@ -1,13 +1,17 @@
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
+import { ContextProvider } from "./Components/utils/global.context";
+import Home from "./Routes/Home";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Footer />
-      <h1>Hello WOrlds</h1>
-    </div>
+    <ContextProvider>
+      <div className="App">
+        <Navbar />
+        <Home />
+        <Footer />
+      </div>
+    </ContextProvider>
   );
 }
 
