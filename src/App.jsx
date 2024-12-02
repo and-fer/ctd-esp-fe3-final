@@ -1,7 +1,7 @@
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
-import { ContextProvider } from "./Components/utils/global.context";
-import Home from "./Routes/Home";
+import Footer from './Components/Footer'
+import Navbar from './Components/Navbar'
+import { ContextProvider } from './Components/utils/global.context'
+import Home from './Routes/Home'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Footer />
       </div>
     </ContextProvider>
-  );
+  )
 }
 
-export default App;
+export default App
