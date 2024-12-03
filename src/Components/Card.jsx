@@ -1,12 +1,15 @@
 import { useContext, useEffect } from 'react'
 import { ContextGlobal } from './utils/global.context'
+import { Link } from 'react-router-dom'
 
 const Card = ({ name, username, id }) => {
   const { datosDentista } = useContext(ContextGlobal)
+
+  const dentista = datosDentista.find((dentista) => dentista.id === id)
+
   const addFav = () => {
     // Aqui iria la logica para agregar la Card en el localStorage
   }
-  const dentista = datosDentista.find((dentista) => dentista.id === id)
 
   return (
     <div className="card">
@@ -19,6 +22,7 @@ const Card = ({ name, username, id }) => {
       <button onClick={addFav} className="favButton">
         Add fav
       </button>
+      <Link to={`/dentist/${id}`}>Dentista</Link>
     </div>
   )
 }

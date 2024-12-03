@@ -6,6 +6,8 @@ import { ContextGlobal } from '../Components/utils/global.context'
 
 const Home = () => {
   const { datosDentista } = useContext(ContextGlobal)
+  console.log('DATOS DENTISTA', datosDentista)
+
   return (
     <main className="">
       <h1>Home</h1>
