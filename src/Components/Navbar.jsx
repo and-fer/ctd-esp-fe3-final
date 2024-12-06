@@ -12,8 +12,11 @@ const Navbar = () => {
         Favoritos <span className="fav_counter">{state.favs.length}</span>
       </Link>
       <Link to="/contact">Contacto</Link>
-      <button onClick={() => dispatch({ type: 'TOGGLE_THEME' })}>
-        Change theme
+      <button
+        className="themeButton"
+        onClick={() => dispatch({ type: 'TOGGLE_THEME' })}
+      >
+        {state.theme === 'light' ? '🌞' : '🌚'}
       </button>
     </nav>
   )
