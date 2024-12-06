@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { ContextGlobal } from './utils/global.context'
 import { Link } from 'react-router-dom'
+import PerfilDentista from '../../public/images/doctor.jpg'
 
 const Card = ({ name, username, id }) => {
   const { state, dispatch } = useContext(ContextGlobal)
@@ -26,12 +27,15 @@ const Card = ({ name, username, id }) => {
   return (
     <div className="card">
       <Link to={`/dentist/${id}`}>
-        <p>{id}</p>
-        <sub>name:</sub>
+        <div className="perfil_card_img">
+          <img
+            src={PerfilDentista}
+            alt="Imagen de plantilla para perfiles de dentistas"
+          />
+        </div>
         <p>
           <strong>{name}</strong>
         </p>
-        <sub>username:</sub>
         <p>{username}</p>
       </Link>
       <button

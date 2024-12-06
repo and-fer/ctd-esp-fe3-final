@@ -58,7 +58,7 @@ export const ContextProvider = ({ children }) => {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('theme', JSON.stringify(state.theme))
+    localStorage.setItem('theme', state.theme)
   }, [state.theme])
 
   useEffect(() => {

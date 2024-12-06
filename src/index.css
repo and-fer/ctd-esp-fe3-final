@@ -132,7 +132,6 @@ form {
   flex-direction: column;
   align-items: center;
   width: 200px;
-  padding: 1rem 0;
   padding-bottom: 0;
   border: 0.5px solid rgb(136, 136, 136);
 }
@@ -154,6 +153,11 @@ form {
 .card span {
   font-weight: bold;
   color: #4b0f04;
+}
+.card img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 table {
