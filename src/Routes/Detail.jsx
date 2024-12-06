@@ -14,7 +14,7 @@ const Detail = () => {
 
    return (
       <div>
-         <h1>Detail Dentist {id} </h1>
+         <h1>Detalle de dentista con id {id} </h1>
          <table>
             <thead>
                <tr>

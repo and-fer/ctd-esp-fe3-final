@@ -10,37 +10,34 @@ import Detail from './Routes/Detail'
 import Contact from './Routes/Contact'
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/dentist/:id',
-        element: <Detail />,
-      },
-      {
-        path: '/favs',
-        element: <Favs />,
-      },
+   {
+      path: '/',
+      element: <App />,
+      children: [
+         {
+            path: '/',
+            element: <Home />,
+         },
+         {
+            path: '/dentist/:id',
+            element: <Detail />,
+         },
+         {
+            path: '/favs',
+            element: <Favs />,
+         },
 
-      //   path: '/detail',
-      //   element: <Detail />,
-      // },
-      {
-        path: '/contact',
-        element: <Contact />,
-      },
-    ],
-  },
+         {
+            path: '/contact',
+            element: <Contact />,
+         },
+      ],
+   },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+   <React.StrictMode>
+      <RouterProvider router={router} />
+   </React.StrictMode>
 )
