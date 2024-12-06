@@ -6,16 +6,8 @@ import PerfilDentista from '../../public/images/doctor.jpg'
 const Card = ({ name, username, id }) => {
   const { state, dispatch } = useContext(ContextGlobal)
 
-  let storedDentistas = JSON.parse(localStorage.getItem('favs')) || []
   const dentista = state.data.find((dentista) => dentista.id === id)
-  const isFavorite =
-    state.favs.some((fav) => fav.id === id) ||
-    storedDentistas.some((fav) => fav.id === id)
-
-  if (!Array.isArray(storedDentistas)) {
-    console.error('storedDentistas no es un Array')
-    storedDentistas = []
-  }
+  const isFavorite = state.favs.some((fav) => fav.id === id)
 
   const toggleFav = () => {
     dispatch({
