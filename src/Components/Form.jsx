@@ -67,7 +67,7 @@ const Form = ({ setSuccessForm }) => {
           disabled={isSubmitted}
         />
         <button type="submit" value="Submit" disabled={isSubmitted}>
-          Submit
+          Enviar
         </button>
       </form>
       <div>

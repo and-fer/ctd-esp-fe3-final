@@ -93,6 +93,30 @@ a:hover {
   width: 19px;
   color: white;
 }
+.sin_favoritos {
+  text-align: center;
+  margin: auto;
+  color: gray;
+}
+
+.sin_favoritos__txt {
+  font-size: 20px;
+}
+
+.sin_favoritos__btn {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.limpiar_favoritos {
+  margin-bottom: 30px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.limpiar_favoritos__btn {
+  padding: 5px 10px;
+  cursor: pointer;
+}
 
 footer {
   display: flex;
@@ -190,10 +214,25 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+/* ::::: DARK THEME ::::: */
+
 .dark {
   background-color: #12121296;
   color: black;
 }
-.dark > a {
+.dark h1,
+.dark nav a,
+.dark .contacto h2,
+.dark .contacto p,
+.dark table th,
+.dark table td {
   color: white;
+}
+
+.dark .contacto .warning {
+  color: #ffff00;
+}
+
+.dark .sin_favoritos__txt {
+  color: #e9e9ed;
 }

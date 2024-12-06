@@ -23,6 +23,11 @@ const reducer = (state, action) => {
 
       return { ...state, favs: updatedFavs }
     }
+    case 'CLEAR_FAVS':
+      return {
+        ...state,
+        favs: [],
+      }
     case 'TOGGLE_THEME':
       return {
         ...state,
