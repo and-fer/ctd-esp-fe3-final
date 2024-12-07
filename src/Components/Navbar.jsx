@@ -9,7 +9,8 @@ const Navbar = () => {
     <nav>
       <Link to="/">Home</Link>
       <Link to="/favs">
-        Favoritos <span className="fav_counter">{state.favs.length}</span>
+        Favoritos
+        <div className="fav_counter">{state.favs.length}</div>
       </Link>
       <Link to="/contact">Contacto</Link>
       <button

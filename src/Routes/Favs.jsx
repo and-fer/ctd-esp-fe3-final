@@ -34,9 +34,9 @@ const Favs = () => {
         </>
       ) : (
         <div className="sin_favoritos">
-          <p className="sin_favoritos__txt">No tienes favoritos todavía...</p>
+          <p className="sin_favoritos__txt">No hay favoritos todavía...</p>
           <button className="sin_favoritos__btn" onClick={() => navigate('/')}>
-            Volver a Home
+            « Volver a Home
           </button>
         </div>
       )}

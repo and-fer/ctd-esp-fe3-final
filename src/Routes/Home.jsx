@@ -7,17 +7,31 @@ const Home = () => {
 
   return (
     <main className="Home">
-      <h1>Home</h1>
-      <div className="card-grid">
-        {dentistas.data.map((dentista) => (
-          <Card
-            key={dentista.id}
-            id={dentista.id}
-            name={dentista.name}
-            username={dentista.username}
-          />
-        ))}
-      </div>
+      {dentistas.success && (
+        <>
+          <h1>Home</h1>
+          <div className="card-grid">
+            {dentistas.data.map((dentista) => (
+              <Card
+                key={dentista.id}
+                id={dentista.id}
+                name={dentista.name}
+                username={dentista.username}
+              />
+            ))}
+          </div>
+        </>
+      )}
+      {dentistas.loading && (
+        <div className="status_loading">
+          <p>Cargando datos...</p>
+        </div>
+      )}
+      {dentistas.error && (
+        <div className="status_error">
+          <p>Error: {dentistas.error}</p>
+        </div>
+      )}
     </main>
   )
 }

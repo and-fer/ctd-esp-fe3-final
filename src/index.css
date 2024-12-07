@@ -84,14 +84,28 @@ a:hover {
   color: rgb(136, 136, 136);
 }
 
+.status_loading,
+.status_error {
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.status_error {
+  color: red;
+}
+
 .fav_counter {
   display: inline-block;
   padding: 2px;
   text-align: center;
   background-color: #ff6347;
   border-radius: 50%;
-  width: 19px;
+  width: 20px;
+  height: 20px;
   color: white;
+  font-weight: bold;
+  margin-top: -2px;
+  margin-left: 5px;
 }
 .sin_favoritos {
   text-align: center;
@@ -100,11 +114,12 @@ a:hover {
 }
 
 .sin_favoritos__txt {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 .sin_favoritos__btn {
   padding: 5px 10px;
+  font-size: 1rem;
   cursor: pointer;
 }
 .limpiar_favoritos {
@@ -212,6 +227,19 @@ th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.not_found {
+  margin-top: 55px;
+  text-align: center;
+}
+.not_found a {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #ff6347;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 /* ::::: DARK THEME ::::: */

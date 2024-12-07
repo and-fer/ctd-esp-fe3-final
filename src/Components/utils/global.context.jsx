@@ -5,14 +5,32 @@ export const initialState = {
   theme: localStorage.getItem('theme') || 'light',
   data: [],
   favs: JSON.parse(localStorage.getItem('favs')) || [],
+  loading: true,
+  success: false,
+  error: null,
 }
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'GET_DENTISTAS':
+    case 'SUCCESS':
       return {
         ...state,
         data: action.payload,
+        loading: false,
+        success: true,
+        error: null,
+      }
+    case 'LOADING':
+      return {
+        ...state,
+        loading: action.payload,
+      }
+    case 'ERROR':
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+        data: [],
       }
     case 'TOGGLE_FAV': {
       const isFav = state.favs.some((fav) => fav.id === action.payload.id)
@@ -51,11 +69,13 @@ export const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
+      dispatch({ type: 'LOADING' })
       try {
         const response = await axios.get(url)
 
-        dispatch({ type: 'GET_DENTISTAS', payload: response.data })
+        dispatch({ type: 'SUCCESS', payload: response.data })
       } catch (err) {
+        dispatch({ type: 'ERROR', payload: err.message })
         console.log(err)
       }
     }
