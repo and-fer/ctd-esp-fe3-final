@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import Card from '../Components/Card'
-import { ContextGlobal } from '../Components/utils/global.context'
+import { ContextGlobal } from '../Context/Context'
 
 const Home = () => {
   const { state: dentistas } = useContext(ContextGlobal)

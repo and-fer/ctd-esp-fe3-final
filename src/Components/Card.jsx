@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { ContextGlobal } from './utils/global.context'
+import { ContextGlobal } from '../Context/Context'
 import { Link } from 'react-router-dom'
 import PerfilDentista from '../../public/images/doctor.jpg'
 
